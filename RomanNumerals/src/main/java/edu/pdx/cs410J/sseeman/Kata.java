@@ -45,7 +45,18 @@ public class Kata {
     return retValue;
   }
 
-  public static String iMultiples(int number) {
+
+    /**
+     * Utility helper function to determine the number of each type of Roman
+     * Character's needed
+     *
+     * @param number
+     *        Arabic Number to be converted into a Roman Numeral
+     * @return String containing the translated number.  If the number
+     *         can not be converted, then a "Error" String will be
+     * @throws NumberFormatException
+     */
+     public static String iMultiples(int number) throws  NumberFormatException {
       int count = 0;
       String romanNumeral = "";
       if (number < 4) {                 // how many "I"s needed
@@ -59,6 +70,8 @@ public class Kata {
           for (int i = 0; i < count; i++) {
               romanNumeral += romanNumeralFor(1);
           }
+      } else {
+          throw new NumberFormatException("Number to large to interpret");
       }
       return romanNumeral;
 
