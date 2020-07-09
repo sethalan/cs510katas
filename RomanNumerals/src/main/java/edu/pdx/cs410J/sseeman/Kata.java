@@ -15,9 +15,19 @@ public class Kata {
   }
 
   public static String romanNumeralFor(int number) {
-    if (number == 1) {
-      return "I";
+    String retValue;                  // Default value
+
+     switch(number) {
+      case 1:
+        retValue="I";
+        break;
+      case 5:
+        retValue="V";
+        break;
+       default:
+        retValue="Not Implemented";
     }
-    return "NA";
+
+    return retValue;
   }
 }
