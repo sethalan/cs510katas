@@ -12,6 +12,22 @@ public class KataTest
   public void romanNumeralFor1isI() {
     assertThat(Kata.romanNumeralFor(1), equalTo("I"));
   }
+  @Test
+  public void romanNumeralFor2isII() {
+    assertThat(Kata.iMultiples(2), equalTo("II"));
+  }
+  @Test
+  public void romanNumeralFor3isIII() {
+    assertThat(Kata.iMultiples(3), equalTo("III"));
+  }
+  @Test
+  public void romanNumeralFor6isVI() {
+    assertThat(Kata.iMultiples(6), equalTo("VI"));
+  }
+  @Test
+  public void romanNumeralFor8isVIII() {
+    assertThat(Kata.iMultiples(8), equalTo("VIII"));
+  }
 
   @Test
   public void romanNumeralFor5isV() {
@@ -39,6 +55,7 @@ public class KataTest
   public void romanNumeralFor1000isM() {
     assertThat(Kata.romanNumeralFor(1000), equalTo("M"));
   }
+
 
 
 

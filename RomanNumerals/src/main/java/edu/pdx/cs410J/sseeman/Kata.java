@@ -42,7 +42,25 @@ public class Kata {
        default:
         retValue="Not Implemented";
     }
-
     return retValue;
+  }
+
+  public static String iMultiples(int number) {
+      int count = 0;
+      String romanNumeral = "";
+      if (number < 4) {                 // how many "I"s needed
+          count = number;
+          for (int i = 0; i < count; i++) {
+              romanNumeral += romanNumeralFor(1);
+          }
+      } else if (number < 9) {
+          count = number % 5;
+          romanNumeral += romanNumeralFor(5);
+          for (int i = 0; i < count; i++) {
+              romanNumeral += romanNumeralFor(1);
+          }
+      }
+      return romanNumeral;
+
   }
 }
