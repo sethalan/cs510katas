@@ -24,6 +24,21 @@ public class Kata {
       case 5:
         retValue="V";
         break;
+       case 10:
+         retValue="X";
+         break;
+       case 50:
+         retValue="L";
+         break;
+       case 100:
+         retValue="C";
+         break;
+       case 500:
+         retValue="D";
+         break;
+       case 1000:
+         retValue="M";
+         break;
        default:
         retValue="Not Implemented";
     }
