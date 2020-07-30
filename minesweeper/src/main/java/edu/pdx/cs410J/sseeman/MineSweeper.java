@@ -12,14 +12,49 @@ public class MineSweeper {
 
   public MineSweeper (int n, int m) {
     map = new Character[n][m];
-    for (int i=0; i < n; i++) {
+
+    for (int i=q; i < n; i++) {
       for (int j=0; j < n; j++) {
         map[i][j] = '.';
       }
     }
+
+    map[0][0] = '*';
   }
   public Character[][] getMap() {
     return map;
+  }
+
+  public Counter(int n, int m)
+  {
+
+    for (int i=0; i < n; i++) {
+      for (int j=0; j < n; j++) {
+
+        int counter =0;
+        if(map[i-1][j]=="*")
+          ++Counter;
+          if(map[i-1][j-1]=="*")
+            ++Counter;
+          if(map[i-1][j+1]=="*")
+            ++Counter;
+          if(map[i+1][j-1]=="*")
+            ++Counter;
+          if(map[i+1][j]=="*")
+          ++Counter;
+          if(map[i+1][j+1]=="*")
+          ++Counter;
+          if(map[i][j+1]=="*")
+          ++Counter;
+          if(map[i][j-1]=="*")
+            ++Counter;
+          map[i][j]= counter;
+
+
+      }
+    }
+
+
   }
 
   public static void main(String[] args) {

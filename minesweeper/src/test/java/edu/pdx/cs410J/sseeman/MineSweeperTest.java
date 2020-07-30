@@ -16,10 +16,17 @@ public class MineSweeperTest
    MineSweeper game = new MineSweeper(4, 4);
   }
 
-  @Test
-  public void canInstantiateMineSweeperDefault() {
-    MineSweeper game = new MineSweeper(4, 4);
-    Character[][] map = game.getMap();
-    assertThat(map[1][1], equalTo('.'));
+  @test
+  public void caninstantiateminesweeperdefault() {
+    minesweeper game = new minesweeper(4, 4);
+    character[][] map = game.getmap();
+    assertthat(map[1][1], equalto('.'));
+  }
+
+  @test
+  public void caninstantiateminesweeperdefault() {
+    minesweeper game = new minesweeper(4, 4);
+    character[][] map = game.getmap();
+    assertthat(map[1][1], equalto('1'));
   }
 }
