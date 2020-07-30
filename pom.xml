@@ -37,6 +37,7 @@ accordingly
   <modules>
         
     <module>RomanNumerals</module>
+    <module>minesweeper</module>
       
   </modules>
     

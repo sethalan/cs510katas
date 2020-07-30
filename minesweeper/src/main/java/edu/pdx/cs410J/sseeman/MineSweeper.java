@@ -13,8 +13,8 @@ public class MineSweeper {
   public MineSweeper (int n, int m) {
     map = new Character[n][m];
 
-    for (int i=q; i < n; i++) {
-      for (int j=0; j < n; j++) {
+    for (int i = 0; i < n; i++) {
+      for (int j = 0; j < n; j++) {
         map[i][j] = '.';
       }
     }
@@ -25,31 +25,31 @@ public class MineSweeper {
     return map;
   }
 
-  public Counter(int n, int m)
+  public void setCounter(int n, int m)
   {
 
     for (int i=0; i < n; i++) {
       for (int j=0; j < n; j++) {
 
-        int counter =0;
-        if(map[i-1][j]=="*")
+        int Counter =0;
+        if(map[i-1][j]=='*'){
           ++Counter;
-          if(map[i-1][j-1]=="*")
-            ++Counter;
-          if(map[i-1][j+1]=="*")
-            ++Counter;
-          if(map[i+1][j-1]=="*")
-            ++Counter;
-          if(map[i+1][j]=="*")
+        }
+        if(map[i-1][j-1]=='*')
           ++Counter;
-          if(map[i+1][j+1]=="*")
+        if(map[i-1][j+1]=='*')
           ++Counter;
-          if(map[i][j+1]=="*")
+        if(map[i+1][j-1]=='*')
           ++Counter;
-          if(map[i][j-1]=="*")
-            ++Counter;
-          map[i][j]= counter;
-
+        if(map[i+1][j]=='*')
+          ++Counter;
+        if(map[i+1][j+1]=='*')
+          ++Counter;
+        if(map[i][j+1]=='*')
+          ++Counter;
+        if(map[i][j-1]=='*')
+          ++Counter;
+        map[i][j]= (char)Counter;
 
       }
     }
